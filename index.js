@@ -1,7 +1,7 @@
 var nom = ("teste de nom")
 var jeu = ("nom du jeu teste")
-statue_actuel = ('online')
-
+var statue_actuel = ('online')
+var prefix = ("V!")
 
 
 
@@ -17,7 +17,6 @@ const db = low(adapter);
 
 
 var number_random = 0;
-var prefix = ("sigbot!")
 var party_launch = false;
 
 bot.on('ready', function() {
