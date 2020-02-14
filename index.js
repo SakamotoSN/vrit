@@ -8,7 +8,6 @@ const client = new Discord.Client();
 const adapter = new FileSync('database.json');
 const db = low(adapter);
 
-db.defaults({ histoires: [],  xp: []}).write()
 
 var number_random = 0;
 var prefix = ("sigbot!")
