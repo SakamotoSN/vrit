@@ -1,3 +1,10 @@
+var nom = ("teste de nom")
+var jeu = ("nom du jeu teste")
+statue.actuel = ('online')
+
+
+
+
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const low = require('lowdb')
@@ -14,11 +21,16 @@ var prefix = ("sigbot!")
 var party_launch = false;
 
 bot.on('ready', function() {
-    bot.user.setUsername("test")
-    bot.user.setPresence({ game: { name: 'test'}, status: 'online'})
+    bot.user.setUsername(nom)
+    bot.user.setPresence({ game: { name: (jeu)}, status: (statue.actuel)})
     console.log("Connected")});
 
 bot.login(process.env.TOKEN);
+
+
+
+
+
 
 
 
