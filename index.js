@@ -1,6 +1,6 @@
 var nom = ("teste de nom")
 var jeu = ("nom du jeu teste")
-statue.actuel = ('online')
+statue_actuel = ('online')
 
 
 
@@ -22,7 +22,7 @@ var party_launch = false;
 
 bot.on('ready', function() {
     bot.user.setUsername(nom)
-    bot.user.setPresence({ game: { name: (jeu)}, status: (statue.actuel)})
+    bot.user.setPresence({ game: { name: (jeu)}, status: (statue_actuel)})
     console.log("Connected")});
 
 bot.login(process.env.TOKEN);
