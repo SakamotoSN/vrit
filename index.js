@@ -1,7 +1,7 @@
-var nom = ("teste de nom")
-var jeu = ("nom du jeu teste")
-var statue_actuel = ('online')
-var prefix = ("V!")
+var nom = ("Vérité Vérité")      //speudo
+var jeu = ("ne dire que la vériter")  //nom du jeu 
+var statue_actuel = ('online')  //statue
+var prefix = ("V!")             //prefix
 
 
 
@@ -34,7 +34,7 @@ bot.login(process.env.TOKEN);
 
 
 bot.on('message', message => {
-
+//envois en DM un message
     if(message.content.startsWith(prefix + "DM")) {
 
         if(message.mentions.users.first()){
@@ -44,62 +44,20 @@ bot.on('message', message => {
 
         userToSend.send(`${message.author.username} vous a envoyer un message!\n${messageToSend}`);
         message.delete(`${message.author.username} vous a envoyer un message!\n${messageToSend}`);
-        message.channel.send(`**${message.author}** , votre message a bien été envoyer a **${message.mentions.users.first().username}** :D`)
+        message.channel.send(`**${message.author}** , votre message a bien été envoyer a **${message.mentions.users.first().username}**`)
 }else{
     message.delete();
     message.channel.send(`erreur`)
 
 }
 }
-if(message.content == "G-N start"){
-    if(party_launch == true){
-        message.channel.send(`une manche est deja en cours ${message.author}`)
-    }else{
-aléa1();
 
-    if (alé1 == 1){
-        message.channel.send(":arrow_forward: cette manche sera entre 0 est 5000 :arrow_forward: ")
-        
-        number_random = Math.floor(Math.random() * (5000 - 0) + 0)
-        console.log(number_random);
-}
-if (alé1 == 2){
-    message.channel.send(":arrow_forward: cette manche sera entre 0 est 20000 :arrow_forward: ")
-    
-    number_random = Math.floor(Math.random() * (20000 - 0) + 0)
-    console.log(number_random);
-}
-if (alé1== 3){
-    message.channel.send(":arrow_forward: cette manche sera entre 0 est 100000 :arrow_forward: ")
-    number_random = Math.floor(Math.random() * (100000 - 0) + 0)
-    console.log(number_random);
-}
-party_launch = true;
-}
-}
-if(party_launch && message.content !=null){
-    if(Number.isInteger(parseInt(message.content))){
-        if(message.content > number_random){
-            message.channel.send(":arrow_down: plus petit :arrow_down: ")
-        }
-        else if(message.content < number_random){
-            message.channel.send(":arrow_up: plus grand :arrow_up: ")
-        }
-        else{
-                message.channel.send(`:ballot_box_with_check: ${message.author} a gagner cette manche :ballot_box_with_check:`);
-            party_launch = false
-        }
-    }
-}
-if(message.content == "G-N stop"){
-    if(party_launch == true){
-            message.channel.send(`:stop_button: ${message.author} a décider de stoper la manche :stop_button: `)
-        party_launch = false;
-}else{
- message.channel.send("aucune game en cours")
-}
-}
 
+
+
+
+
+//si ton ID est dans cette commande alors tu peu utiliser cette commande qui fais parler le bot
 if(message.content.startsWith(prefix + "say")){
     if("234368202379886593".includes(message.author.id)){
     let args = message.content.split(" ").slice(1)
