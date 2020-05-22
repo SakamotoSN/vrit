@@ -45,11 +45,11 @@ bot.on('message', message => {
 
 }
 }
-if (message.content.startsWith("!ice-bot")){
-    message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
-}
 if (message.content.startsWith(prefix + "bonjour")){
     message.channel.send(`Bonjours, je suis un bot`)
+}
+if(message.content == prefix){
+    message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
 }
 
 
