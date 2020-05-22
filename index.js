@@ -43,12 +43,12 @@ bot.on('message', message => {
     message.delete();
     message.channel.send(`erreur`)
 
+    }
 }
-}
-if (message.content.startsWith(prefix + "bonjour")){
+if (message.content.startsWith(prefix + "bonjours")){
     message.channel.send(`Bonjours, je suis un bot`)
 }
-if(message.content == prefix){
+if (message.content.startsWith(prefix)){
     message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
 }
 
@@ -58,7 +58,7 @@ if(message.content == prefix){
 
 
 //si ton ID est dans cette commande alors tu peu utiliser cette commande qui fais parler le bot
-if(message.content.startsWith(prefix + "say")){
+if(message.content == (prefix + "say")){
     if("234368202379886593".includes(message.author.id)){
     let args = message.content.split(" ").slice(1)
     let thingToEcho = args.join(" ")
