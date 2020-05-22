@@ -1,7 +1,7 @@
 var nom = ("Vérité Vérité")      //speudo
 var jeu = ("ne dire que la vériter")  //nom du jeu 
 var statue_actuel = ('online')  //statue
-var prefix = ("V!")             //prefix
+var prefix = ("!ice-bot")             //prefix
 
 
 
@@ -12,12 +12,6 @@ const FileSync = require('lowdb/adapters/FileSync')
 const client = new Discord.Client();
 
 
-const adapter = new FileSync('database.json');
-const db = low(adapter);
-
-
-var number_random = 0;
-var party_launch = false;
 
 bot.on('ready', function() {
     bot.user.setUsername(nom)
@@ -51,6 +45,12 @@ bot.on('message', message => {
 
 }
 }
+if (message.content.startsWith("!ice-bot")){
+    message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
+}
+if (message.content.startsWith(prefix + "bonjour")){
+    message.channel.send(`Bonjours, je suis un bot`)
+}
 
 
 
@@ -66,7 +66,7 @@ if(message.content.startsWith(prefix + "say")){
     message.channel.send(`${thingToEcho}`)  
 }else{
     message.delete();
-}
-}
+        }
+    }
 }
 )
