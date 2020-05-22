@@ -1,5 +1,5 @@
-var nom = ("Vérité Vérité")      //speudo
-var jeu = ("ne dire que la vériter")  //nom du jeu 
+var nom = ("Ice-Bot")      //speudo
+var jeu = ("Game")  //nom du jeu 
 var statue_actuel = ('online')  //statue
 var prefix = ("!ice-bot")             //prefix
 
