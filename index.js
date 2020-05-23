@@ -80,7 +80,8 @@ if(message.content === "!ice-bot help"){ //help
     .setAuthor("Ice-Bot")
     .setColor(0x00FFF8)
     .setFooter("Ce bot est principalement un bot troll")
-    .addField("!ice-bot hello\n!ice-bot play\n!ice-bot search\n!ice-bot meme")
+    .addField("Commande actuel",
+    "!ice-bot meme\n!ice-bot search\n!ice-bot play\n!ice-bot hello")
      .setThumbnail("https://cdn.discordapp.com/attachments/713157932258295950/713724412423045201/flat550x550075f.jpg")
     message.channel.send({embed});
 }
