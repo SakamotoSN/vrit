@@ -81,6 +81,7 @@ if(message.content.startsWith("!(S)MP")) {
     let userToSend = message.mentions.users.first();
 
     userToSend.send(`${messageToSend}`);
+    message.delete();
 }else{
 message.delete();
 message.channel.send(`erreur`)
