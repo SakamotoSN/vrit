@@ -24,17 +24,19 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
 
-    if(message.content.startsWith(prefix + "meme")){
+    if(message.content.startsWith("!ice-bot!meme")){
         message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
-        }else
-        if(message.content.startsWith(prefix + "search")){
-            message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
-}else        
-        if(message.content.startsWith(prefix + "play")){
-    message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
-}else   
+        }
 
-if(message.content.startsWith(prefix + "hello")){
+        if(message.content.startsWith("!ice-bot!search")){
+            message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
+}      
+
+        if(message.content.startsWith("!ice-bot!play")){
+    message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
+} 
+
+if(message.content.startsWith("!ice-bot!hello")){
 message.channel.send("Bonjour, je suis un bot")
 }
 
