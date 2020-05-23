@@ -31,14 +31,14 @@ bot.on('message', message => {
 
 
 if(message.content.startsWith("!ice-bot meme")){
-message.channel.send(`T'as oublié le - dans la commande batard`)
+message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
 }
 if(message.content.startsWith("!ice bot")){
     message.channel.send(`T'as oublié le - dans la commande batard`)
     }
     
 
-if(message.content.startsWith("!ice-bot meme")){
+if(message.content.startsWith("!ice-bot search")){
     function random(min, max) {
         min = Math.ceil(0)// 0 est impossible a avoir
         max = Math.floor(10)
