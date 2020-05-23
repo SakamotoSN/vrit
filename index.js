@@ -21,29 +21,14 @@ bot.on('ready', function() {
 bot.login(process.env.TOKEN);
 
 
-
-
-
-
+if(message.content.startsWith(prefix)){
+message.channel.send('My Message')
+}
 
 
 bot.on('message', message => {
 
-    if(message.content === "Xarrin!help"){ //Xarrin help
- 
-        const embed = new Discord.RichEmbed()
-        .setTitle("commande pour les gif")
-        .setColor(0x0086AE)
-        .setDescription("voila les gif et image que Xarrin posséde")
-        .setThumbnail("https://cdn.discordapp.com/attachments/434681503964725248/435060807118749700/SF_Byakko.png")
-        .setFooter("pour plus d'info demander a sig :D")
-        .addField("gif",
-          "Xarrin!nickel\nXarrin!voyeur\nXarrin!ham")
-          .addField("image",
-          "Xarrin!Invocation:Byakko\nXarrin!Invocation:Phoenix\nXarrin!invocation:spiritwater\nXarrin!invocation:spiritearth\nXarrin!invocation:spiritwind\nXarrin!invocation:spiritfire")
-    
-        message.channel.send({embed});
-    }
+
 
 
 
