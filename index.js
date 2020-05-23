@@ -28,8 +28,16 @@ bot.login(process.env.TOKEN);
 
 
 bot.on('message', message => {
+
+
+
+
 //envois en DM un message
     if(message.content.startsWith(prefix + "DM")) {
+        
+
+
+
 
         if(message.mentions.users.first()){
 
@@ -44,18 +52,12 @@ bot.on('message', message => {
     message.channel.send(`erreur`)
 
     }
-}
 if (message.content.startsWith(prefix + "bonjours")){
     message.channel.send(`Bonjours, je suis un bot`)
 }
 if (message.content.startsWith(prefix)){
     message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
 }
-
-
-
-
-
 
 //si ton ID est dans cette commande alors tu peu utiliser cette commande qui fais parler le bot
 if(message.content == (prefix + "say")){
@@ -68,5 +70,18 @@ if(message.content == (prefix + "say")){
     message.delete();
         }
     }
+    
+    if (message.content.startsWith(prefix)){
+        message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
+    }
+}
+
+
+
+
+
+
+
+
 }
 )
