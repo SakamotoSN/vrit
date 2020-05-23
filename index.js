@@ -85,14 +85,18 @@ if(message.content === "!ice-bot help"){ //help
      .setThumbnail("https://cdn.discordapp.com/attachments/713157932258295950/713724412423045201/flat550x550075f.jpg")
     message.channel.send({embed});
 }
+
 if(message.content === "!ice-bot eurobeat"){ 
     message.channel.send("", {
     file: "https://raw.githubusercontent.com/hugo59191/vrit/master/file/euro.jpg"
 })
+}
+
 if(message.content === "!ice-bot anime"){ 
     message.channel.send("Rentres dans ce trou, s'il te plaît.", {
     file: "https://raw.githubusercontent.com/hugo59191/vrit/master/file/hole.gif"
 })
+}
 
 
 }
