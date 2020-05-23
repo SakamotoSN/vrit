@@ -11,7 +11,11 @@ const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 const client = new Discord.Client();
 
-
+function random(min, max) {
+    min = Math.ceil(0)// 0 est impossible a avoir
+    max = Math.floor(100)
+    RNG = Math.floor(Math.random() * (max - min +1) + min);
+ }
 
 bot.on('ready', function() {
     bot.user.setUsername(nom)
@@ -35,13 +39,7 @@ if(message.content.startsWith("!ice bot")){
     
     
     if(message.content.startsWith("!ice-bot search")){ 
-        
-        
-        function random(min, max) {
-            min = Math.ceil(0)// 0 est impossible a avoir
-            max = Math.floor(100)
-            RNG = Math.floor(Math.random() * (max - min +1) + min);
-         }
+         random();
         
     if (RNG < 80 ){
 message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
@@ -49,7 +47,23 @@ message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${m
     message.channel.send(`Tien BG : https://www.google.fr`)
 } 
 
-} 
+}
+
+
+if(message.content.startsWith("!ice-bot meme")){
+    function random(min, max) {
+        min = Math.ceil(0)// 0 est impossible a avoir
+        max = Math.floor(10)
+        RNG = Math.floor(Math.random() * (max - min +1) + min);
+     }
+    random();
+    console.log(RNG)
+    if (RNG < 80){
+        message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
+}else{
+    message.channel.send(`Tien BG : https://www.google.fr`)   
+}
+}
 
 
 
