@@ -53,7 +53,7 @@ bot.on('message', message => {
     message.channel.send(`erreur`)
     console.log("DM ERROR")
     }
-}
+
 
 
 if(message.content == (prefix + "bonjours")){
