@@ -2,7 +2,7 @@ var nom = ("Ice-Bot")      //speudo
 var jeu = ("Game")  //nom du jeu 
 var statue_actuel = ('online')  //statue
 var prefix = ("!ice-bot")             //prefix
-var error =(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
+
 
 
 const Discord = require('discord.js');
@@ -25,13 +25,13 @@ bot.login(process.env.TOKEN);
 bot.on('message', message => {
 
     if(message.content.startsWith(prefix + "meme")){
-        message.channel.send(error)
+        message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
         }else
         if(message.content.startsWith(prefix + "search")){
-            message.channel.send(error)
+            message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
 }else        
         if(message.content.startsWith(prefix + "play")){
-    message.channel.send(error)
+    message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
 }else   
 
 if(message.content.startsWith(prefix + "hello")){
