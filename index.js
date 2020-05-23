@@ -11,7 +11,11 @@ const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 const client = new Discord.Client();
 
-
+function RNG01(min, max) {
+    min = Math.ceil(0)
+    max = Math.floor(100)
+    RNG1 = Math.floor(Math.random() * (max - min +1) + min);
+ }
 
 bot.on('ready', function() {
     bot.user.setUsername(nom)
@@ -32,10 +36,19 @@ message.channel.send(`T'as oublié le - dans la commande batard`)
 if(message.content.startsWith("!ice bot")){
     message.channel.send(`T'as oublié le - dans la commande batard`)
     }
-
+    
+    
+    
+    if (RNG1 < 80 ){
 if(message.content.startsWith("!ice-bot search")){
 message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
-}      
+}
+}else {
+    message.channel.send(`Tien BG : https://www.google.fr`)
+}   
+
+
+
 
 if(message.content.startsWith("!ice-bot play")){
 message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
