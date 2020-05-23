@@ -24,7 +24,7 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
 
-    if(message.content.startsWith(prefix)){
+    if(message.content.startsWith(prefix + "find", "search")){
         console.log("debut")
         message.channel.send('My Message')
         console.log("finis")
