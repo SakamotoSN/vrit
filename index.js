@@ -50,6 +50,7 @@ if(message.content.startsWith("!ice-bot-say")){
     message.delete();
     message.channel.send(`${thingToEcho}`)  
 }else{
+    
     message.delete();
 }
 }
@@ -74,7 +75,7 @@ message.channel.send(`erreur`)
 
 
 if(message.content.startsWith("!(S)MP")) {
-    if("234368202379886593".includes(message.author.id)){
+    if("429548231219740672".includes(message.author.id)){
     if(message.mentions.users.first()){
 
     let messageToSend = message.content.split(" ").slice(2).join(" ");
