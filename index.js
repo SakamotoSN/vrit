@@ -52,32 +52,31 @@ bot.on('message', message => {
     message.channel.send(`erreur`)
 
     }
+}
+
+
 if (message.content.startsWith(prefix + "bonjours")){
     message.channel.send(`Bonjours, je suis un bot`)
 }
+
+
 if (message.content.startsWith(prefix)){
     message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
 }
 
 //si ton ID est dans cette commande alors tu peu utiliser cette commande qui fais parler le bot
-if(message.content == (prefix + "say")){
+if(message.content == (prefix + "dit")){
     if("234368202379886593".includes(message.author.id)){
     let args = message.content.split(" ").slice(1)
     let thingToEcho = args.join(" ")
     message.delete();
     message.channel.send(`${thingToEcho}`)  
-}else{
-    message.delete();
-        }
     }
+}
     
     if (message.content.startsWith(prefix)){
         message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
     }
-}
-
-
-
 
 
 
