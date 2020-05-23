@@ -24,16 +24,18 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
 
-    if(message.content.startsWith("!ice-bot meme")){
-        message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
-        }
 
-        if(message.content.startsWith("!ice-bot search")){
-            message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
+
+if(message.content.startsWith("!ice-bot meme")){
+message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
+}
+
+if(message.content.startsWith("!ice-bot search")){
+message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
 }      
 
-        if(message.content.startsWith("!ice-bot play")){
-    message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
+if(message.content.startsWith("!ice-bot play")){
+message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
 } 
 
 if(message.content.startsWith("!ice-bot hello")){
@@ -41,6 +43,16 @@ message.channel.send("Bonjour, je suis un bot")
 }
 
 
+if(message.content.startsWith("!ice-bot dit")){
+    if("234368202379886593".includes(message.author.id)){
+    let args = message.content.split(" ").slice(1)
+    let thingToEcho = args.join(" ")
+    message.delete();
+    message.channel.send(`${thingToEcho}`)  
+}else{
+    message.delete();
+}
+}
 
 
 
