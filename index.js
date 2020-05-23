@@ -47,10 +47,11 @@ bot.on('message', message => {
         userToSend.send(`${message.author.username} vous a envoyer un message!\n${messageToSend}`);
         message.delete(`${message.author.username} vous a envoyer un message!\n${messageToSend}`);
         message.channel.send(`**${message.author}** , votre message a bien été envoyer a **${message.mentions.users.first().username}**`)
+        console.log("DM DONE")
 }else{
     message.delete();
     message.channel.send(`erreur`)
-
+    console.log("DM ERROR")
     }
 }
 
@@ -66,11 +67,13 @@ if(message.content == (prefix + "dit")){
     let thingToEcho = args.join(" ")
     message.delete();
     message.channel.send(`${thingToEcho}`)  
+    console.log("SAY DONE")
     }
 }
     
-    if (message.content.startsWith(prefix + "search", "find", "play")){
+if (message.content.startsWith(prefix + "search", "find", "play")){
         message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
+        console.log("FINISH") 
     }
 
 
