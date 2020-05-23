@@ -64,6 +64,7 @@ if(message.content.startsWith("!ice-bot-MP")) {
 
     userToSend.send(`${message.author.username} vous a envoyer un message!\n\n${messageToSend}`);
     message.delete(`${message.author.username} vous a envoyer un message!\n\n${messageToSend}`);
+    message.delete();
     message.channel.send(`**${message.author}** , votre message a bien été envoyer a **${message.mentions.users.first().username}**`)
 }else{
 message.delete();
