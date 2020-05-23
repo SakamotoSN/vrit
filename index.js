@@ -43,7 +43,7 @@ message.channel.send("Bonjour, je suis un bot")
 }
 
 
-if(message.content.startsWith("!ice-bot-dit")){
+if(message.content.startsWith("!ice-bot-say")){
     if("234368202379886593".includes(message.author.id)){
     let args = message.content.split(" ").slice(1)
     let thingToEcho = args.join(" ")
@@ -54,7 +54,7 @@ if(message.content.startsWith("!ice-bot-dit")){
 }
 }
 
-if(message.content.startsWith("!ice-bot-DM")) {
+if(message.content.startsWith("!ice-bot-MP")) {
 
     if(message.mentions.users.first()){
 
