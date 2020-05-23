@@ -53,6 +53,7 @@ bot.on('message', message => {
     message.channel.send(`erreur`)
     console.log("DM ERROR")
     }
+}
 
 
 
@@ -75,7 +76,6 @@ if (message.content.startsWith(prefix + "search", "find", "play")){
         message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
         console.log("FINISH") 
     }
-
 
 
 
