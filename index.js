@@ -29,12 +29,21 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
 
-if (message.content.startsWith(prefix + "search", "find", "play")){
-    console.log("detecter")
-        message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
-       console.log("FINISH") 
+    if(message.content === "Xarrin!help"){ //Xarrin help
+ 
+        const embed = new Discord.RichEmbed()
+        .setTitle("commande pour les gif")
+        .setColor(0x0086AE)
+        .setDescription("voila les gif et image que Xarrin posséde")
+        .setThumbnail("https://cdn.discordapp.com/attachments/434681503964725248/435060807118749700/SF_Byakko.png")
+        .setFooter("pour plus d'info demander a sig :D")
+        .addField("gif",
+          "Xarrin!nickel\nXarrin!voyeur\nXarrin!ham")
+          .addField("image",
+          "Xarrin!Invocation:Byakko\nXarrin!Invocation:Phoenix\nXarrin!invocation:spiritwater\nXarrin!invocation:spiritearth\nXarrin!invocation:spiritwind\nXarrin!invocation:spiritfire")
+    
+        message.channel.send({embed});
     }
-
 
 
 
