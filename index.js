@@ -37,18 +37,6 @@ if(message.content.startsWith("!ice bot")){
     message.channel.send(`T'as oublié le - dans la commande batard`)
     }
     
-    
-    if(message.content.startsWith("!ice-bot search")){ 
-         random();
-        
-    if (RNG < 80 ){
-message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
-}else {
-    message.channel.send(`Tien BG : https://www.google.fr`)
-} 
-
-}
-
 
 if(message.content.startsWith("!ice-bot meme")){
     function random(min, max) {
