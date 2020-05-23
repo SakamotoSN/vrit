@@ -35,13 +35,15 @@ if(message.content.startsWith("!ice bot")){
     
     
     if(message.content.startsWith("!ice-bot search")){ 
-        function RNG01(min, max) {
-            min = Math.ceil(0)
+        
+        
+        function random(min, max) {
+            min = Math.ceil(0)// 0 est impossible a avoir
             max = Math.floor(100)
-            RNG1 = Math.floor(Math.random() * (max - min +1) + min);
+            RNG = Math.floor(Math.random() * (max - min +1) + min);
          }
         
-    if (RNG01 < 80 ){
+    if (RNG < 80 ){
 message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
 }else {
     message.channel.send(`Tien BG : https://www.google.fr`)
