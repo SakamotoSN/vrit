@@ -32,15 +32,28 @@ bot.on('message', message => {
 
 
 
-
-if(message.content == (prefix + "bonjours")){
-    message.channel.send(`Bonjours, je suis un bot`)
-}
-    
-if (message.content.startsWith(prefix + "search", "find", "play")){
-        message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
-        console.log("FINISH") 
+    if(message.content.startsWith(prefix + "dit")){
+        if("234368202379886593".includes(message.author.id)){
+        let args = message.content.split(" ").slice(1)
+        let thingToEcho = args.join(" ")
+        message.delete();
+        message.channel.send(`${thingToEcho}`)  
+    }else{
+        message.delete();
     }
+    }
+
+
+
+
+//if(message.content == (prefix + "bonjours")){
+//    message.channel.send(`Bonjours, je suis un bot`)
+//}
+    
+//if (message.content.startsWith(prefix + "search", "find", "play")){
+//        message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
+//       console.log("FINISH") 
+//    }
 
 
 
