@@ -32,44 +32,9 @@ bot.on('message', message => {
 
 
 
-//envois en DM un message
-    if(message.content.startsWith(prefix + "DM")) {
-        
-
-
-
-
-        if(message.mentions.users.first()){
-
-        let messageToSend = message.content.split(" ").slice(2).join(" ");
-        let userToSend = message.mentions.users.first();
-
-        userToSend.send(`${message.author.username} vous a envoyer un message!\n${messageToSend}`);
-        message.delete(`${message.author.username} vous a envoyer un message!\n${messageToSend}`);
-        message.channel.send(`**${message.author}** , votre message a bien été envoyer a **${message.mentions.users.first().username}**`)
-        console.log("DM DONE")
-}else{
-    message.delete();
-    message.channel.send(`erreur`)
-    console.log("DM ERROR")
-    }
-}
-
-
 
 if(message.content == (prefix + "bonjours")){
     message.channel.send(`Bonjours, je suis un bot`)
-}
-
-//si ton ID est dans cette commande alors tu peu utiliser cette commande qui fais parler le bot
-if(message.content == (prefix + "dit")){
-    if("234368202379886593".includes(message.author.id)){
-    let args = message.content.split(" ").slice(1)
-    let thingToEcho = args.join(" ")
-    message.delete();
-    message.channel.send(`${thingToEcho}`)  
-    console.log("SAY DONE")
-    }
 }
     
 if (message.content.startsWith(prefix + "search", "find", "play")){
