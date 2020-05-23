@@ -76,11 +76,13 @@ message.channel.send(`erreur`)
 if(message.content === "!ice-bot help"){ //help
  
     const embed = new Discord.RichEmbed()
+    .setAuthor("Ice-Bot")
     .setTitle("Voici les commandue de Ice-Bot")
-    .setColor(0x0086AE)
-    .addField("Voici les commandue de Ice-Bot",
+    .setColor(0x00FFF8)
+    .addField("",
      "!ice-bot hello\n!ice-bot play\n!ice-bot search\n!ice-bot meme")
      .setThumbnail("https://cdn.discordapp.com/attachments/713157932258295950/713724412423045201/flat550x550075f.jpg")
+     .setFooter("Ce bot est principalement un bot troll")
     message.channel.send({embed});
 }
 
