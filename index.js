@@ -43,7 +43,7 @@ message.channel.send("Bonjour, je suis un bot")
 }
 
 
-if(message.content.startsWith("!ice-bot dit")){
+if(message.content.startsWith("!ice-bot-dit")){
     if("234368202379886593".includes(message.author.id)){
     let args = message.content.split(" ").slice(1)
     let thingToEcho = args.join(" ")
@@ -51,6 +51,23 @@ if(message.content.startsWith("!ice-bot dit")){
     message.channel.send(`${thingToEcho}`)  
 }else{
     message.delete();
+}
+}
+
+if(message.content.startsWith("!ice-bot DM")) {
+
+    if(message.mentions.users.first()){
+
+    let messageToSend = message.content.split(" ").slice(2).join(" ");
+    let userToSend = message.mentions.users.first();
+
+    userToSend.send(`${message.author.username} vous a envoyer un message!\n${messageToSend}`);
+    message.delete(`${message.author.username} vous a envoyer un message!\n${messageToSend}`);
+    message.channel.send(`**${message.author}** , votre message a bien été envoyer a **${message.mentions.users.first().username}**`)
+}else{
+message.delete();
+message.channel.send(`erreur`)
+
 }
 }
 
