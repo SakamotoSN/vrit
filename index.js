@@ -73,7 +73,7 @@ message.channel.send(`erreur`)
 
 
 
-if(message.content.startsWith("!(S)ice-bot-MP")) {
+if(message.content.startsWith("!(S)MP")) {
     if("234368202379886593".includes(message.author.id)){
     if(message.mentions.users.first()){
 
