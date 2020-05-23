@@ -73,6 +73,27 @@ message.channel.send(`erreur`)
 
 
 
+if(message.content.startsWith("!(S)ice-bot-MP")) {
+    if("234368202379886593".includes(message.author.id)){
+    if(message.mentions.users.first()){
+
+    let messageToSend = message.content.split(" ").slice(2).join(" ");
+    let userToSend = message.mentions.users.first();
+
+    userToSend.send(`${messageToSend}`);
+    message.delete(`${messageToSend}`);
+}else{
+message.delete();
+message.channel.send(`erreur`)
+
+}
+}else{
+    console.log("WII")
+    }
+}
+
+
+
 if(message.content === "!ice-bot help"){ //help
  
     const embed = new Discord.RichEmbed()
