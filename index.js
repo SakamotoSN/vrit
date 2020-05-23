@@ -1,5 +1,5 @@
 var nom = ("Ice-Bot")      //speudo
-var jeu = ("Game")  //nom du jeu 
+var jeu = ("Smash Ultimate")  //nom du jeu 
 var statue_actuel = ('online')  //statue
 var prefix = ("!ice-bot")             //prefix
 
@@ -71,6 +71,19 @@ message.channel.send(`erreur`)
 }
 }
 
+
+
+if(message.content === "ice-bot help"){ //help
+ 
+    const embed = new Discord.RichEmbed()
+    .setTitle("commande")
+    .setColor(0x0086AE)
+    .setFooter("Ce bot est un troll !")
+    .addField("Voici les commandue de Ice-Bot",
+     "!ice-bot hello\n!ice-bot play\n!ice-bot search\n!ice-bot meme")
+
+    message.channel.send({embed});
+}
 
 
 
