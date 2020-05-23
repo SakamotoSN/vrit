@@ -41,7 +41,7 @@ if(message.content.startsWith("!ice bot")){
 if(message.content.startsWith("!ice-bot search")){
     function random(min, max) {
         min = Math.ceil(0)// 0 est impossible a avoir
-        max = Math.floor(10)
+        max = Math.floor(100)
         RNG = Math.floor(Math.random() * (max - min +1) + min);
      }
     random();
