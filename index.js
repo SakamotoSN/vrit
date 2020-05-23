@@ -30,7 +30,7 @@ if(message.content.startsWith("!ice-bot meme")){
 message.channel.send(`T'as oublié le - dans la commande batard`)
 }
 if(message.content.startsWith("!ice bot")){
-    message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
+    message.channel.send(`T'as oublié le - dans la commande batard`)
     }
 
 if(message.content.startsWith("!ice-bot search")){
