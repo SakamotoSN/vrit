@@ -47,8 +47,10 @@ if(message.content.startsWith("!ice-bot search")){
     random();
     console.log(RNG)
     if (RNG < 80){
+        console.log("RNG normal")
         message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
 }else{
+    console.log("RNG google")
     message.channel.send(`Tien BG : https://www.google.fr`)   
 }
 }
