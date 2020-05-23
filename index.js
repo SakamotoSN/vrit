@@ -38,14 +38,14 @@ if(message.content.startsWith("!ice bot")){
     }
     
     
-    
+    if(message.content.startsWith("!ice-bot search")){    
     if (RNG1 < 80 ){
-if(message.content.startsWith("!ice-bot search")){
 message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
-}
 }else {
     message.channel.send(`Tien BG : https://www.google.fr`)
-}   
+} 
+ 
+} 
 
 
 
