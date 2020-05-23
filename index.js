@@ -55,13 +55,8 @@ bot.on('message', message => {
 }
 
 
-if (message.content.startsWith(prefix + "bonjours")){
+if(message.content == (prefix + "bonjours")){
     message.channel.send(`Bonjours, je suis un bot`)
-}
-
-
-if (message.content.startsWith(prefix)){
-    message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
 }
 
 //si ton ID est dans cette commande alors tu peu utiliser cette commande qui fais parler le bot
@@ -74,7 +69,7 @@ if(message.content == (prefix + "dit")){
     }
 }
     
-    if (message.content.startsWith(prefix)){
+    if (message.content.startsWith(prefix + "search", "find", "play")){
         message.channel.send(`Je ne parviens pas à trouver ta merde, précise mieux ${message.author}`)
     }
 
