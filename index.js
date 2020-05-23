@@ -21,14 +21,12 @@ bot.on('ready', function() {
 bot.login(process.env.TOKEN);
 
 
-if(message.content.startsWith(prefix)){
-message.channel.send('My Message')
-}
-
 
 bot.on('message', message => {
 
-
+    if(message.content.startsWith(prefix)){
+        message.channel.send('My Message')
+        }
 
 
 
