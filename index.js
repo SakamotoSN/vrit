@@ -54,7 +54,7 @@ if(message.content.startsWith("!ice-bot-dit")){
 }
 }
 
-if(message.content.startsWith("!ice-bot DM")) {
+if(message.content.startsWith("!ice-bot-DM")) {
 
     if(message.mentions.users.first()){
 
